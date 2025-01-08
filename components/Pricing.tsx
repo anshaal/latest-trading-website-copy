@@ -1,7 +1,18 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const tiers = [
+type Tier = {
+  name: string;
+  monthlyPrice: number;
+  yearlyPrice: number;
+  yearlyDiscount: number;
+  description: string;
+  features: string[];
+  monthlyLink: string;
+  yearlyLink: string;
+};
+
+const tiers: Tier[] = [
   {
     name: "Titans Algo Pro",
     monthlyPrice: 99,
@@ -9,13 +20,13 @@ const tiers = [
     yearlyDiscount: 43,
     description: "For an experience without limits",
     features: [
-      "Monthly profits with Premium Indicator and personal guidence",
+      "Monthly profits with Premium Indicator and personal guidance",
       "Quick search and writeGet access to Daily High Winrate Signals",
       "Learn Market Analysis by Pro Traders",
-      "Quick support for every member"
+      "Quick support for every member",
     ],
     monthlyLink: "https://dummy-whoop-link-pro-monthly",
-    yearlyLink: "https://dummy-whoop-link-pro-yearly"
+    yearlyLink: "https://dummy-whoop-link-pro-yearly",
   },
   {
     name: "Titans Algo Pro+",
@@ -24,38 +35,40 @@ const tiers = [
     yearlyDiscount: 70,
     description: "Everything in Pro plus",
     features: [
-      "Monthly profits with Premium Indicator and personal guidence in every session",
+      "Monthly profits with Premium Indicator and personal guidance in every session",
       "Daily High Winrate Signals and access to Market Analysis by Pro Traders",
       "Get access to Personal Account Management Service at your ease",
       "Get access Algo Trading Setups",
     ],
     monthlyLink: "https://dummy-whoop-link-proplus-monthly",
-    yearlyLink: "https://dummy-whoop-link-proplus-yearly"
-  }
+    yearlyLink: "https://dummy-whoop-link-proplus-yearly",
+  },
 ];
 
-const Pricing = () => {
-  const [billingType, setBillingType] = useState('annual');
+const Pricing: React.FC = () => {
+  const [billingType, setBillingType] = useState<"monthly" | "annual">("annual");
 
-  const formatPrice = (price) => {
+  const formatPrice = (price: number): string => {
     return `$${price.toFixed(2)}`;
   };
 
-  const getDisplayPrice = (tier) => {
-    if (billingType === 'annual') {
+  const getDisplayPrice = (
+    tier: Tier
+  ): { price: string; period: string } => {
+    if (billingType === "annual") {
       return {
         price: formatPrice(tier.yearlyPrice),
-        period: 'per year'
+        period: "per year",
       };
     }
     return {
       price: formatPrice(tier.monthlyPrice),
-      period: 'per month'
+      period: "per month",
     };
   };
 
-  const handlePurchase = (tier) => {
-    const link = billingType === 'annual' ? tier.yearlyLink : tier.monthlyLink;
+  const handlePurchase = (tier: Tier): void => {
+    const link = billingType === "annual" ? tier.yearlyLink : tier.monthlyLink;
     window.location.href = link;
   };
 
@@ -83,21 +96,21 @@ const Pricing = () => {
               Choose the right plan for you
             </p>
           </div>
-          
+
           <div className="w-full max-w-sm mb-16">
             <div className="bg-gray-800 rounded-lg p-1 flex">
               <button
-                onClick={() => setBillingType('monthly')}
+                onClick={() => setBillingType("monthly")}
                 className={`flex-1 py-2 px-4 rounded ${
-                  billingType === 'monthly' ? 'bg-gray-700 text-white' : 'text-gray-300'
+                  billingType === "monthly" ? "bg-gray-700 text-white" : "text-gray-300"
                 }`}
               >
                 Monthly
               </button>
               <button
-                onClick={() => setBillingType('annual')}
+                onClick={() => setBillingType("annual")}
                 className={`flex-1 py-2 px-4 rounded flex items-center justify-center ${
-                  billingType === 'annual' ? 'bg-gray-700 text-white' : 'text-gray-300'
+                  billingType === "annual" ? "bg-gray-700 text-white" : "text-gray-300"
                 }`}
               >
                 Annual
@@ -124,7 +137,7 @@ const Pricing = () => {
                 <div className="mt-6">
                   <p className="text-4xl font-bold text-white">{getDisplayPrice(tier).price}</p>
                   <p className="text-sm text-gray-400">{getDisplayPrice(tier).period}</p>
-                  {billingType === 'annual' && (
+                  {billingType === "annual" && (
                     <p className="mt-2 text-sm text-indigo-400">
                       Save {tier.yearlyDiscount}% with annual billing
                     </p>
@@ -133,7 +146,7 @@ const Pricing = () => {
 
                 <p className="mt-6 text-gray-300">{tier.description}</p>
 
-                <button 
+                <button
                   onClick={() => handlePurchase(tier)}
                   className="mt-8 w-full rounded-lg bg-indigo-500 py-2 text-white hover:bg-indigo-600 transition-colors"
                 >
@@ -143,8 +156,18 @@ const Pricing = () => {
                 <ul className="mt-8 space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-gray-300">
-                      <svg className="h-5 w-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="h-5 w-5 text-indigo-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                       {feature}
                     </li>

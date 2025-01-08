@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { ReactNode, useRef } from "react";import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-
-const AnimatedCard = ({ children }) => {
+// import { useRef } from "react";
+interface AnimatedCardProps {
+  children: ReactNode;
+}
+const AnimatedCard: React.FC<AnimatedCardProps> = ({ children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -22,9 +23,6 @@ const AnimatedCard = ({ children }) => {
 };
 
 const Dashboard = () => {
-  const topRef = useRef(null);
-  const isTopInView = useInView(topRef, { once: true, amount: 0.3 });
-  
   return (
     <div className="min-h-screen bg-black text-white p-4 md:p-6 lg:p-8 flex justify-center items-center">
       <div className="max-w-7xl w-full">
@@ -33,46 +31,24 @@ const Dashboard = () => {
           <AnimatedCard>
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isTopInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-sm text-gray-400"
-                >
-                  Live Tracking
-                </motion.div>
-                <motion.h1 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isTopInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-bold"
-                >
+                <div className="text-sm text-gray-400">Live Tracking</div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                   Advanced insights in{" "}
                   <span className="text-cyan-400">real-time</span>
-                </motion.h1>
-                <motion.p 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isTopInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  className="text-gray-400 max-w-xl"
-                >
+                </h1>
+                <p className="text-gray-400 max-w-xl">
                   Track all markets in real-time with proprietary buy & sell
                   points, multi-timeframe support & resistance zones, auto golden
                   pocket, & more.
-                </motion.p>
+                </p>
               </div>
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isTopInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="relative h-[200px] md:h-[300px] w-full rounded-lg overflow-hidden border border-gray-800"
-              >
+              <div className="relative h-[200px] md:h-[300px] w-full rounded-lg overflow-hidden border border-gray-800">
                 <img
                   src="https://www.luxalgo.com/images/product/showcases/showcase_1.png"
                   alt="Live trading chart"
                   className="object-cover hover:scale-110 transition-transform duration-700"
                 />
-              </motion.div>
+              </div>
             </div>
           </AnimatedCard>
 
