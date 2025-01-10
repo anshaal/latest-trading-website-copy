@@ -25,8 +25,8 @@ const tiers: Tier[] = [
       "Learn Market Analysis by Pro Traders",
       "Quick support for every member",
     ],
-    monthlyLink: "https://dummy-whoop-link-pro-monthly",
-    yearlyLink: "https://dummy-whoop-link-pro-yearly",
+    monthlyLink: "https://whop.com/checkout/plan_3rKocQWXgM3JA?d2c=true",
+    yearlyLink: "https://whop.com/checkout/plan_TAOGLIObc6dVK?d2c=true",
   },
   {
     name: "Titans Algo Pro+",
@@ -40,8 +40,8 @@ const tiers: Tier[] = [
       "Get access to Personal Account Management Service at your ease",
       "Get access Algo Trading Setups",
     ],
-    monthlyLink: "https://dummy-whoop-link-proplus-monthly",
-    yearlyLink: "https://dummy-whoop-link-proplus-yearly",
+    monthlyLink: "https://whop.com/checkout/plan_xkWisN8GDUDM9?d2c=true",
+    yearlyLink: "https://whop.com/checkout/plan_qoNfECSq0hK7o?d2c=true",
   },
 ];
 
@@ -84,25 +84,25 @@ const Pricing: React.FC = () => {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          className="relative left-[calc(50%-13rem)] aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-70"
         />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="text-center mb-8">
-            <h2 className="text-base font-semibold text-indigo-300">Pricing</h2>
+            <h2 className="text-base font-semibold text-gray-300">Pricing</h2>
             <p className="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Choose the right plan for you
             </p>
           </div>
 
           <div className="w-full max-w-sm mb-16">
-            <div className="bg-gray-800 rounded-lg p-1 flex">
+            <div className="bg-white/10 rounded-lg p-1 flex">
               <button
                 onClick={() => setBillingType("monthly")}
                 className={`flex-1 py-2 px-4 rounded ${
-                  billingType === "monthly" ? "bg-gray-700 text-white" : "text-gray-300"
+                  billingType === "monthly" ? "bg-white text-black" : "text-white"
                 }`}
               >
                 Monthly
@@ -110,11 +110,11 @@ const Pricing: React.FC = () => {
               <button
                 onClick={() => setBillingType("annual")}
                 className={`flex-1 py-2 px-4 rounded flex items-center justify-center ${
-                  billingType === "annual" ? "bg-gray-700 text-white" : "text-gray-300"
+                  billingType === "annual" ? "bg-white text-black" : "text-white"
                 }`}
               >
                 Annual
-                <span className="ml-2 bg-indigo-500 text-white text-xs px-2 py-0.5 rounded">
+                <span className="ml-2 bg-black text-white text-xs px-2 py-0.5 rounded">
                   Save up to 70%
                 </span>
               </button>
@@ -125,11 +125,11 @@ const Pricing: React.FC = () => {
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className="flex flex-col rounded-lg bg-gray-900 p-8 ring-1 ring-gray-800 hover:ring-indigo-500 transition-all duration-300"
+                className="flex flex-col rounded-lg bg-white/5 p-8 ring-1 ring-white/10 hover:ring-white/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-2">
-                  <div className="h-8 w-8 rounded-full bg-gray-800 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-indigo-500 rounded-full" />
+                  <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{tier.name}</h3>
                 </div>
@@ -138,7 +138,7 @@ const Pricing: React.FC = () => {
                   <p className="text-4xl font-bold text-white">{getDisplayPrice(tier).price}</p>
                   <p className="text-sm text-gray-400">{getDisplayPrice(tier).period}</p>
                   {billingType === "annual" && (
-                    <p className="mt-2 text-sm text-indigo-400">
+                    <p className="mt-2 text-sm text-gray-300">
                       Save {tier.yearlyDiscount}% with annual billing
                     </p>
                   )}
@@ -148,7 +148,7 @@ const Pricing: React.FC = () => {
 
                 <button
                   onClick={() => handlePurchase(tier)}
-                  className="mt-8 w-full rounded-lg bg-indigo-500 py-2 text-white hover:bg-indigo-600 transition-colors"
+                  className="mt-8 w-full rounded-lg bg-white py-2 text-black hover:bg-gray-100 transition-colors"
                 >
                   Get Started
                 </button>
@@ -157,7 +157,7 @@ const Pricing: React.FC = () => {
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-gray-300">
                       <svg
-                        className="h-5 w-5 text-indigo-500"
+                        className="h-5 w-5 text-white"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

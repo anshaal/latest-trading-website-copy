@@ -1,23 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-// Define the FAQ type
 interface FAQ {
   question: string;
   answer: string;
 }
 
 const FAQs: React.FC = () => {
-  // State to manage which FAQ is currently open
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  // Function to toggle FAQ open/close
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  // FAQs array
   const faqs: FAQ[] = [
     {
       question: "What services does Titans Algo provide?",
@@ -49,36 +46,59 @@ const FAQs: React.FC = () => {
   return (
     <section className="bg-black text-white">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-5 py-16 md:px-10 md:py-20">
-        <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10"
+        >
           <p className="font-inter mb-2 text-center text-sm font-medium text-gray-400">FAQs</p>
           <h2 className="text-3xl lg:text-5xl font-bold text-white">
             Frequently Asked Questions
           </h2>
-          {/* <p className="font-inter mt-4 max-w-xl px-5 text-base font-light text-gray-400 lg:max-w-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna.
-          </p> */}
-        </div>
-        <div className="mt-10 flex w-full flex-col">
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-10 flex w-full flex-col"
+        >
           {faqs.map((faq, index) => (
-            <React.Fragment key={index}>
-              <div className="relative my-3 w-full rounded-md bg-[#18181B] border-[#2F2F32] border px-12 py-8">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div 
+                onClick={() => toggleFAQ(index)}
+                className="relative my-3 w-full rounded-md bg-[#18181B] border-[#2F2F32] border px-12 py-8 cursor-pointer hover:bg-[#1f1f23] transition-colors duration-300"
+              >
                 <div className="max-w-2xl">
-                  <h2
-                    className="text-xl font-bold text-white cursor-pointer"
-                    onClick={() => toggleFAQ(index)}
-                  >
+                  <h2 className="text-xl font-semibold text-white">
                     {faq.question}
                   </h2>
-                  {openFAQ === index && (
-                    <p className="font-inter mt-4 text-base font-light text-gray-300">
-                      {faq.answer}
-                    </p>
-                  )}
+                  <AnimatePresence>
+                    {openFAQ === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        style={{ overflow: "hidden" }}
+                      >
+                        <p className="font-inter mt-4 text-base font-light text-gray-300">
+                          {faq.answer}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <button
-                  className="absolute right-5 top-9 focus:outline-none"
-                  onClick={() => toggleFAQ(index)}
+                <motion.div
+                  className="absolute right-5 top-9 pointer-events-none"
+                  animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <svg
                     width="24"
@@ -105,19 +125,11 @@ const FAQs: React.FC = () => {
                       ></path>
                     )}
                   </svg>
-                </button>
+                </motion.div>
               </div>
-              {/* <div className="mr-4 ml-8 border border-gray-700"></div> */}
-            </React.Fragment>
+            </motion.div>
           ))}
-        </div>
-        <p className="font-inter mx-auto mt-12 text-center text-base text-gray-400">
-          Can't find the answer you're looking for? Reach out to our
-          <a href="#" className="text-white font-bold">
-            {" "}
-            customer support team.
-          </a>
-        </p>
+        </motion.div>
       </div>
     </section>
   );
