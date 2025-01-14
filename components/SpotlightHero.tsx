@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 
 const SpotlightHero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center  bg-black antialiased bg-grid-white/[0.02]  overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center  bg-[#11141a] antialiased bg-grid-white/[0.02]  overflow-hidden">
       <div className="w-full flex items-center justify-center  bg-cover bg-center bg-no-repeat ">
         {/* Sparkle effect */}
         <div className="absolute inset-0 flex justify-center items-end">

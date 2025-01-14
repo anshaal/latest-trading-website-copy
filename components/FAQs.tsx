@@ -44,21 +44,23 @@ const FAQs: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black text-white">
+    <section className="bg-[#11141a] text-white">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-5 py-16 md:px-10 md:py-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10"
         >
-          <p className="font-inter mb-2 text-center text-sm font-medium text-gray-400">FAQs</p>
+          <p className="font-inter mb-2 text-center text-sm font-medium text-gray-400">
+            FAQs
+          </p>
           <h2 className="text-3xl lg:text-5xl font-bold text-white">
             Frequently Asked Questions
           </h2>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -71,7 +73,7 @@ const FAQs: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div 
+              <div
                 onClick={() => toggleFAQ(index)}
                 className="relative my-3 w-full rounded-md bg-[#18181B] border-[#2F2F32] border px-12 py-8 cursor-pointer hover:bg-[#1f1f23] transition-colors duration-300"
               >

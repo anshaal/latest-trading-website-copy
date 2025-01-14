@@ -46,15 +46,15 @@ const tiers: Tier[] = [
 ];
 
 const Pricing: React.FC = () => {
-  const [billingType, setBillingType] = useState<"monthly" | "annual">("annual");
+  const [billingType, setBillingType] = useState<"monthly" | "annual">(
+    "annual"
+  );
 
   const formatPrice = (price: number): string => {
     return `$${price.toFixed(2)}`;
   };
 
-  const getDisplayPrice = (
-    tier: Tier
-  ): { price: string; period: string } => {
+  const getDisplayPrice = (tier: Tier): { price: string; period: string } => {
     if (billingType === "annual") {
       return {
         price: formatPrice(tier.yearlyPrice),
@@ -73,7 +73,7 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <div id="pricing" className="relative isolate bg-black min-h-screen">
+    <div id="pricing" className="relative isolate bg-[#11141a] min-h-screen">
       {/* Background gradient effect */}
       <div
         aria-hidden="true"
@@ -102,7 +102,9 @@ const Pricing: React.FC = () => {
               <button
                 onClick={() => setBillingType("monthly")}
                 className={`flex-1 py-2 px-4 rounded-2xl ${
-                  billingType === "monthly" ? "bg-white text-black" : "text-white"
+                  billingType === "monthly"
+                    ? "bg-white text-black"
+                    : "text-white"
                 }`}
               >
                 Monthly
@@ -110,7 +112,9 @@ const Pricing: React.FC = () => {
               <button
                 onClick={() => setBillingType("annual")}
                 className={`flex-1 py-2 px-4 rounded-2xl flex items-center justify-center ${
-                  billingType === "annual" ? "bg-white text-black" : "text-white"
+                  billingType === "annual"
+                    ? "bg-white text-black"
+                    : "text-white"
                 }`}
               >
                 Annual
@@ -131,12 +135,18 @@ const Pricing: React.FC = () => {
                   <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center">
                     <div className="w-3 h-3 bg-white rounded-full" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{tier.name}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {tier.name}
+                  </h3>
                 </div>
 
                 <div className="mt-6">
-                  <p className="text-4xl font-bold text-white">{getDisplayPrice(tier).price}</p>
-                  <p className="text-sm text-gray-400">{getDisplayPrice(tier).period}</p>
+                  <p className="text-4xl font-bold text-white">
+                    {getDisplayPrice(tier).price}
+                  </p>
+                  <p className="text-sm text-gray-400">
+                    {getDisplayPrice(tier).period}
+                  </p>
                   {billingType === "annual" && (
                     <p className="mt-2 text-sm text-gray-300">
                       Save {tier.yearlyDiscount}% with annual billing
@@ -155,7 +165,10 @@ const Pricing: React.FC = () => {
 
                 <ul className="mt-8 space-y-3">
                   {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-gray-300">
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-gray-300"
+                    >
                       <svg
                         className="h-5 w-5 text-white"
                         fill="none"

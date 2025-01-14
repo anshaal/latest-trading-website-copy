@@ -30,16 +30,19 @@ const ImageSlideshow: React.FC = () => {
 
   return (
     <div className="relative h-[300px] w-full overflow-hidden rounded-xl border border-gray-800">
-      <AnimatePresence initial={false}>
+      <AnimatePresence mode="wait">
         <motion.img
           key={currentIndex}
           src={images[currentIndex].url}
           alt={images[currentIndex].alt}
           className="absolute w-full h-full object-cover"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ 
+            duration: 0.7,
+            ease: "easeInOut"
+          }}
         />
       </AnimatePresence>
     </div>
