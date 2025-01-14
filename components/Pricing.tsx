@@ -73,7 +73,7 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <div className="relative isolate bg-black min-h-screen">
+    <div id="pricing" className="relative isolate bg-black min-h-screen">
       {/* Background gradient effect */}
       <div
         aria-hidden="true"
@@ -98,10 +98,10 @@ const Pricing: React.FC = () => {
           </div>
 
           <div className="w-full max-w-sm mb-16">
-            <div className="bg-white/10 rounded-lg p-1 flex">
+            <div className="bg-white/10 rounded-2xl p-1 flex">
               <button
                 onClick={() => setBillingType("monthly")}
-                className={`flex-1 py-2 px-4 rounded ${
+                className={`flex-1 py-2 px-4 rounded-2xl ${
                   billingType === "monthly" ? "bg-white text-black" : "text-white"
                 }`}
               >
@@ -109,7 +109,7 @@ const Pricing: React.FC = () => {
               </button>
               <button
                 onClick={() => setBillingType("annual")}
-                className={`flex-1 py-2 px-4 rounded flex items-center justify-center ${
+                className={`flex-1 py-2 px-4 rounded-2xl flex items-center justify-center ${
                   billingType === "annual" ? "bg-white text-black" : "text-white"
                 }`}
               >
@@ -125,7 +125,7 @@ const Pricing: React.FC = () => {
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className="flex flex-col rounded-lg bg-white/5 p-8 ring-1 ring-white/10 hover:ring-white/30 transition-all duration-300"
+                className="flex flex-col rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 hover:ring-white/30 transition-all duration-300"
               >
                 <div className="flex items-center gap-2">
                   <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center">
