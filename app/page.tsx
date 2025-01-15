@@ -16,17 +16,19 @@ import CompareComp from "@/components/CompareComp";
 import CardSample from "@/components/CardSample";
 import Dashboard from "@/components/Dashboard";
 
-
 export default function Home() {
   return (
     <>
-
-
       <Navbar />
       <SpotlightHero />
       {/* <ScrollSection/> */}
-      <CompareComp />
-      <Dashboard/>
+
+      {/* Hide CompareComp on mobile */}
+      <div className="hidden sm:block">
+        <CompareComp />
+      </div>
+
+      <Dashboard />
       {/* <CardSample /> */}
       {/* <CardGridSection /> */}
       {/* <MarqueeSlider /> */}

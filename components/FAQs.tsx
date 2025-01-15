@@ -75,7 +75,7 @@ const FAQs: React.FC = () => {
             >
               <div
                 onClick={() => toggleFAQ(index)}
-                className="relative my-3 w-full rounded-md bg-[#18181B] border-[#2F2F32] border px-12 py-8 cursor-pointer hover:bg-[#1f1f23] transition-colors duration-300"
+                className="relative my-3 w-full rounded-md bg-[rgb(25 25 37] border-[#2F2F32] border px-12 py-8 cursor-pointer hover:bg-[rgba(25 25 37] transition-colors duration-300"
               >
                 <div className="max-w-2xl">
                   <h2 className="text-xl font-semibold text-white">

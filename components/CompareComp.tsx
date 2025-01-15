@@ -16,7 +16,7 @@ const CompareComp = () => {
       </div>
       <div className="mt-4">
         <p className="text-center text-sm sm:text-base md:text-lg font-medium px-3 py-1 rounded-md text-white">
-          Drag bar for before and after (TAP ON MOBILE)
+          Titans Algo Daily Sureshot Indicator v1.0 
         </p>
       </div>
     </div>
