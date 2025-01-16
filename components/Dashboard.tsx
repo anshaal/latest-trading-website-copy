@@ -6,7 +6,7 @@ import ImageSlideshow from "./ImageSlideshow";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="relative isolate bg-[#11141a] min-h-screen overflow-hidden">
+    <div className="relative -z-20 isolate bg-[#11141a] min-h-screen overflow-hidden">
       {/* <div
         aria-hidden="true"
         className="absolute -top-40 left-0 -z-10 transform-gpu overflow-hidden blur-3xl"
@@ -48,7 +48,7 @@ const Dashboard: React.FC = () => {
 
       <div className="min-h-screen text-white py-20 px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto mb-16">
-          <div className="text-sm text-cyan-400 mb-2">Features</div>
+          <div className="text-lg md:text-sm text-cyan-400 mb-2">Features</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             One Indicator
             <br />
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
           <AnimatedCard numberProp={1}>
             <div className="flex flex-col lg:flex-row gap-12 ">
               <div className="lg:w-1/2 space-y-6">
-                <h2 className="text-5xl md:text-6xl mb-12 font-semibold">
+                <h2 className="text-4xl md:text-5xl mb-12 font-semibold">
                   High Winrate <span className="text-cyan-400"> Signal</span>
                 </h2>
                 <p className="text-white text-xl">
@@ -85,9 +85,9 @@ const Dashboard: React.FC = () => {
             </div>
           </AnimatedCard>
           <AnimatedCard numberProp={2}>
-            <div className="flex flex-col lg:flex-row gap-12 ">
+            <div className="flex flex-col lg:flex-row gap-16 ">
               <div className="lg:w-1/2 space-y-6">
-                <h2 className="text-5xl text-break md:text-6xl mb-12 font-semibold">
+                <h2 className="text-4xl text-break md:text-5xl mb-12 font-semibold">
                   Non Repaint, Easily
                   <span className="inline sm:hidden">
                     <br />
@@ -112,7 +112,7 @@ const Dashboard: React.FC = () => {
           <AnimatedCard numberProp={3}>
             <div className="flex flex-col lg:flex-row gap-12 ">
               <div className="lg:w-1/2 space-y-6">
-                <h2 className="text-5xl md:text-6xl mb-12 font-semibold">
+                <h2 className="text-4xl md:text-5xl mb-12 font-semibold">
                   Expert market analysis,
                   <span className="text-cyan-400"> pro-trade entries</span>
                 </h2>
@@ -134,7 +134,7 @@ const Dashboard: React.FC = () => {
           <AnimatedCard numberProp={4}>
             <div className="flex flex-col lg:flex-row gap-12 ">
               <div className="lg:w-1/2 space-y-6">
-                <h2 className="text-5xl md:text-6xl mb-12 font-semibold">
+                <h2 className="text-4xl md:text-5xl mb-12 font-semibold">
                   Copy Trading,{" "}
                   <span className="text-cyan-400"> Account Management</span>
                 </h2>

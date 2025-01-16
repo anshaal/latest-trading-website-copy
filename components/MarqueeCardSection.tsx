@@ -1,17 +1,29 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const MarqueeCardSection = () => {
   return (
     <div className="h-[60rem] rounded-md flex flex-col antialiased bg-[#11141a] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      {/* Heading section */}
+      <div className="text-center mb-16">
+        <h2 className="text-base font-semibold text-gray-300">Testimonials</h2>
+        <p className="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          What our traders say
+        </p>
+      </div>
+
       <InfiniteMovingCards
         items={logoTestimonials}
         direction="right"
         speed="slow"
       />
-      <InfiniteMovingCards items={featuresTestimonials} direction="left" speed="slow" />
+      <InfiniteMovingCards
+        items={featuresTestimonials}
+        direction="left"
+        speed="slow"
+      />
       <InfiniteMovingCards
         items={resultsTestimonials}
         direction="right"

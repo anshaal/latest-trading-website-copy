@@ -7,10 +7,12 @@ import Navbar from "@/components/Navbar";
 
 const SpotlightHero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center  bg-[#11141a] antialiased bg-grid-white/[0.02]  overflow-hidden">
+    <div className="min-h-screen bg-[url('/6Titan--0.svg')] bg-contain bg-no-repeat  flex items-center justify-center  bg-[#11141a] antialiased bg-grid-white/[0.02]  overflow-hidden">
+      
       <div className="w-full flex items-center justify-center  bg-cover bg-center bg-no-repeat ">
         {/* Sparkle effect */}
         <div className="absolute inset-0 flex justify-center items-end">
+          
           {/* <SparklesCore
                     id="tsparticlesfullpage"
                     background="transparent"
@@ -26,10 +28,10 @@ const SpotlightHero = () => {
                 className="hidden md:block md:-top-20 md:left-60" 
                 fill="white" 
             /> */}
-
+        
         <div className="p-4 max-w-7xl mx-auto relative z-10 w-full py-12 md:py-20">
           <div className="flex flex-col items-center justify-center overflow-hidden rounded-md relative z-20 px-4">
-            <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold text-center text-white tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center text-white tracking-tight">
               Stop Guessing <br /> Start Earning
             </h1>
 
@@ -46,7 +48,7 @@ const SpotlightHero = () => {
                 <style jsx global>{`
                   .boujee-text {
                     --bg-size: 400%;
-                    font-size: clamp(3rem, 8vmin, 7rem);
+                    font-size: clamp(3rem, 8vmin, 2rem);
                     background: linear-gradient(
                         90deg,
                         #3b82f6,
