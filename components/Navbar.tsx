@@ -34,13 +34,13 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-12">
             <a
-              href="#"
+              href="#features"
               className="text-white hover:text-gray-300 font-semibold  transition-colors"
             >
               Features
             </a>
             <a
-              href="#"
+              href="#testimonials"
               className="text-white hover:text-gray-300 font-semibold  transition-colors"
             >
               Results
@@ -131,13 +131,13 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-4">
             <a
-              href="#"
+              href="#features"
               className="text-white hover:text-gray-300  transition-colors"
             >
               Features
             </a>
             <a
-              href="#"
+              href="#testimonials"
               className="text-white hover:text-gray-300 transition-colors"
             >
               Results

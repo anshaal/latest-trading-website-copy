@@ -6,7 +6,7 @@ import ImageSlideshow from "./ImageSlideshow";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="relative -z-20 isolate bg-[#11141a] min-h-screen overflow-hidden">
+    <div id="features" className="relative -z-20 isolate bg-[#11141a] min-h-screen overflow-hidden">
       {/* <div
         aria-hidden="true"
         className="absolute -top-40 left-0 -z-10 transform-gpu overflow-hidden blur-3xl"

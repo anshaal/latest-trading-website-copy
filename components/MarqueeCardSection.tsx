@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const MarqueeCardSection = () => {
   return (
-    <div className="h-[60rem] rounded-md flex flex-col antialiased bg-[#11141a] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div id="testimonials" className="h-[60rem] rounded-md flex flex-col antialiased bg-[#11141a] dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       {/* Heading section */}
       <div className="text-center mb-16">
         <h2 className="text-base font-semibold text-gray-300">Testimonials</h2>
