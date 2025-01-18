@@ -90,7 +90,7 @@ const Pricing: React.FC = () => {
 
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-base font-semibold text-gray-300">Pricing</h2>
+          <h2 className="text-base font-semibold text-gray-300">cing</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Different plan for unique needs
           </p>
