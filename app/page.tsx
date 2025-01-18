@@ -24,7 +24,7 @@ export default function Home() {
       {/* <ScrollSection/> */}
 
       {/* Hide CompareComp on mobile */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block wdfijjdsfk">
         <CompareComp />
       </div>
 
