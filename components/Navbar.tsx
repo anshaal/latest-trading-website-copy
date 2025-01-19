@@ -26,7 +26,7 @@ const Navbar = () => {
           <a href="#" className="text-white">
             <img
               className="h-12 md:h-16"
-              src="/titansalgo_Logo.PNG"
+              src="/Headerlogo.PNG"
               alt="Logo"
             />
           </a>

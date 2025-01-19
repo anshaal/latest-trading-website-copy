@@ -37,146 +37,146 @@ export default MarqueeCardSection;
 const logoTestimonials = [
   {
     quote:
-      "I started with no experience, and thanks to Titans Algo's indicator, I'm now consistently making profitable trades. The simplicity is mind-blowing!",
-    name: "Alex M.",
-    title: "New Trader",
+      "I was skeptical at first, but Titans Algo proved me wrong! In just two months, I've been making consistent monthly profits, and I can finally say trading feels less stressful and way more rewarding. The Discord group is like a family!",
+    name: "Rohit M.",
+    title: "Engineer, India",
   },
   {
     quote:
-      "The best trading tool I’ve used. No more guesswork, just clear signals and consistent profits every month!",
-    name: "Laura S.",
-    title: "Professional Trader",
+      "Titans Algo is worth every penny! Last month, I made over $2,000 in profits, and I’m not even spending hours analyzing charts anymore. The expert advice in the community is icing on the cake!",
+    name: "Jessica H.",
+    title: "Entrepreneur, USA",
   },
   {
     quote:
-      "Titan's Algo has completely changed the way I approach trading. The indicator is reliable and easy to use, even for beginners!",
-    name: "James B.",
-    title: "Novice Trader",
+      "I started small with Titans Algo, and within three months, my profits have tripled. The signals are spot on, and the Discord community has been so welcoming. It’s like trading with a team of friends.",
+    name: "Igor S.",
+    title: "Full-Time Trader, Russia",
   },
   {
     quote:
-      "I’ve tried other indicators, but none compare to Titans Algo. I’m earning more with less effort, and it’s made a huge difference in my trading success.",
-    name: "Mark T.",
-    title: "Experienced Trader",
+      "This tool is a blessing for busy people like me. I’ve been consistently making an extra $1,500 a month with Titans Algo, and it’s so easy to use. Plus, the support team is super friendly!",
+    name: "Ahmed N.",
+    title: "Investor, UAE",
   },
   {
     quote:
-      "Titan’s Algo has been a game-changer for me. Their easy-to-understand trading signals have helped me increase my returns and reduce my risks.",
-    name: "Sophie W.",
-    title: "Full-Time Trader",
+      "I never imagined trading could be this simple. Titans Algo’s clear signals and monthly tips have helped me earn steady profits while learning so much along the way. Highly recommend!",
+    name: "Lena F.",
+    title: "Analyst, Germany",
   },
   {
     quote:
-      "The simplicity and high accuracy of Titans Algo's indicator have made it a must-have tool in my trading arsenal. Highly recommend!",
-    name: "David K.",
-    title: "Investor",
-  },
-];
-const featuresTestimonials = [
-  {
-    quote:
-      "Titans Algo's high win rate and easy-to-use features make it a perfect fit for traders of all skill levels. I’ve seen consistent profits since using it.",
-    name: "Cathy R.",
-    title: "Advanced Trader",
-  },
-  {
-    quote:
-      "The Momentum detection feature is amazing! It helps me catch profitable trends early and execute trades effortlessly.",
-    name: "Tom H.",
-    title: "Day Trader",
-  },
-  {
-    quote:
-      "I love the no repaint feature and clear entry points. This tool takes the guesswork out of trading and makes my decisions more confident.",
-    name: "Ethan G.",
-    title: "Swing Trader",
-  },
-  {
-    quote:
-      "The automatic signals and copy trading features have saved me countless hours of analysis. It’s like having a team of experts by my side 24/7!",
-    name: "Nina P.",
-    title: "Busy Professional",
-  },
-  {
-    quote:
-      "The customizable settings allow me to tailor the indicator to my unique style of trading, which has boosted my success significantly.",
-    name: "Jake L.",
-    title: "Freelance Trader",
-  },
-  {
-    quote:
-      "Being a complete newbie, I was amazed at how easy Titans Algo made trading. The guide, the signals, and the support are incredible.",
-    name: "Grace F.",
-    title: "Beginner",
-  },
-];
-const resultsTestimonials = [
-  {
-    quote:
-      "I’ve been using Titans Algo for a few months now, and my monthly profits have been consistently higher. I’m no longer just guessing the market.",
-    name: "Ryan D.",
-    title: "Full-Time Trader",
-  },
-  {
-    quote:
-      "With over 85% accuracy, my trading profits have been through the roof. Titans Algo makes it easy to trade with confidence and earn.",
-    name: "Sophia L.",
-    title: "Investor",
-  },
-  {
-    quote:
-      "I started trading just last year, and now I’m making consistent gains every month. I can’t believe how quickly I’ve seen results.",
-    name: "Samuel W.",
-    title: "New Trader",
-  },
-  {
-    quote:
-      "Thanks to Titans Algo, my account has seen consistent growth month after month. The results speak for themselves.",
-    name: "Olivia B.",
-    title: "Part-Time Trader",
-  },
-  {
-    quote:
-      "I no longer feel overwhelmed when trading. With Titans Algo, I’m making profits each month and learning the strategies behind the signals.",
-    name: "David A.",
-    title: "Freelance Trader",
-  },
-  {
-    quote:
-      "I’ve been trading for years, but with Titans Algo, I’m now able to maximize my monthly earnings with minimal effort. This tool is a game-changer.",
-    name: "Ellen P.",
-    title: "Experienced Trader",
-  },
-];
+      "I’ve added over $2,500 to my trading account last month, thanks to Titans Algo. It feels amazing to have such a reliable tool. And the Discord group? It’s like trading with friends worldwide.",
+    name: "Daniel K.",
+    title: "Freelance Trader, Canada",
+  },]
+  const featuresTestimonials = [
+    {
+      quote:
+        "With Titans Algo, I finally feel in control of my trades. The momentum feature has helped me catch trends early, and my monthly profits keep growing. This tool is pure gold!",
+      name: "Priya S.",
+      title: "Stock Trader, India",
+    },
+    {
+      quote:
+        "I’ve been consistently making $1,000–$1,500 every month since I started using Titans Algo. The no-repaint signals are a lifesaver for a day trader like me!",
+      name: "Michael T.",
+      title: "Day Trader, USA",
+    },
+    {
+      quote:
+        "The customization options in Titans Algo are perfect for my style of swing trading. Last month alone, I earned $1,800 in profits. The best part? It feels effortless.",
+      name: "Hans W.",
+      title: "Swing Trader, Germany",
+    },
+    {
+      quote:
+        "As someone with a packed schedule, Titans Algo has been a game-changer. I made $2,000 in profits last month without spending hours glued to charts. It’s truly a lifesaver!",
+      name: "Fatima R.",
+      title: "Busy Professional, UAE",
+    },
+    {
+      quote:
+        "Being a complete beginner, I never thought I’d make $500 in my first month of trading! Titans Algo’s signals are so easy to follow, and the support in Discord is amazing.",
+      name: "Ivan K.",
+      title: "Beginner, Russia",
+    },
+    {
+      quote:
+        "With Titans Algo, trading finally feels rewarding. I made $3,000 in profits last month and feel confident in every trade I take. The guidance and tools are unmatched!",
+      name: "Emily J.",
+      title: "Investor, Australia",
+    },
+    ];
+    const resultsTestimonials = [
+      {
+        quote:
+          "I’ve been using Titans Algo for six months now, and my monthly profits have steadily climbed to $2,500. It’s a tool I can’t trade without!",
+        name: "Rajesh T.",
+        title: "Full-Time Trader, India",
+      },
+      {
+        quote:
+          "Last month, I earned $3,000 with Titans Algo’s incredible accuracy. Trading feels so much simpler and way more fun now!",
+        name: "Sophia R.",
+        title: "Investor, UK",
+      },
+      {
+        quote:
+          "I’ve gone from making random trades to consistently earning $1,000–$1,200 a month. Titans Algo is a true game-changer, especially for someone like me who’s new to trading.",
+        name: "Omar H.",
+        title: "New Trader, UAE",
+      },
+      {
+        quote:
+          "Thanks to Titans Algo, I’ve added $1,500 to my trading account every month. The signals are clear, and the community support is phenomenal!",
+        name: "Elena V.",
+        title: "Part-Time Trader, Russia",
+      },
+      {
+        quote:
+          "Before Titans Algo, I struggled to find consistency in my trades. Now, I’m making over $2,000 monthly, and trading has become a lot less overwhelming.",
+        name: "William L.",
+        title: "Freelance Trader, USA",
+      },
+      {
+        quote:
+          "As someone with years of experience, I can confidently say Titans Algo has taken my trading to the next level. I’ve been making $3,500 a month, and it’s all thanks to this amazing tool.",
+        name: "Ahmed K.",
+        title: "Experienced Trader, Egypt",
+      },
+      ];
 
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
+      const testimonials = [
+        {
+          quote:
+            "I used to dread trading, but Titans Algo turned it into something I look forward to! With $2,000 in profits last month, I feel like I’ve finally cracked the code.",
+          name: "Neha R.",
+          title: "Software Developer, India",
+        },
+        {
+          quote:
+            "I’m blown away by the results! Last month, I earned $1,800 using Titans Algo, and the private Discord community is like having a team of mentors. It’s priceless.",
+          name: "James W.",
+          title: "Business Owner, USA",
+        },
+        {
+          quote:
+            "Titans Algo has made trading so approachable. I earned $1,500 last month and couldn’t be happier. The global community in Discord is just amazing.",
+          name: "Monica L.",
+          title: "Teacher, Germany",
+        },
+        {
+          quote:
+            "As a busy professional, I never thought I’d have time to trade. Titans Algo changed that! I made $1,200 last month with minimal effort, and the support team is wonderful.",
+          name: "Ali Z.",
+          title: "Architect, UAE",
+        },
+        {
+          quote:
+            "I’ve finally found a trading tool that works. Titans Algo has helped me consistently earn $2,000–$2,500 a month, and the learning experience has been fantastic!",
+          name: "Dmitry K.",
+          title: "Engineer, Russia",
+        },
+        ];
