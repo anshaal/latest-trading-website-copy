@@ -13,16 +13,16 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, numberProp }) => 
   useEffect(() => {
     switch (numberProp) {
       case 1:
-        setImageUrl('/1Titan-cropped.svg');
+        setImageUrl('/card1test.svg');
         break;
       case 2:
-        setImageUrl('/2Titan-cropped.svg');
+        setImageUrl('/card2test.svg');
         break;
       case 3:
-        setImageUrl('/3Titan-cropped.svg');
+        setImageUrl('/card3test.svg');
         break;
       default:
-        setImageUrl('/4Titan-cropped.svg'); // Default image
+        setImageUrl('/card4test.svg'); // Default image
         break;
     }
   }, [numberProp]);
